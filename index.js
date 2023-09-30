@@ -22,7 +22,7 @@ const collectionofroomchats = arr[1];
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: process.env.Frountend||"http://localhost:3000",
     methods: ["GET", "POST"],
   },
 });
